@@ -1,0 +1,100 @@
+Microsoft (R) Macro Assembler Version 14.34.31935.0	    03/20/24 21:00:56
+datadefinitions.asm					     Page 1 - 1
+
+
+				; 
+				; CSCI268 - Asgn 1 - Data Definitions
+				;
+				; Miranda Morris
+				; 3/20/2024
+				; This code is meant to define all the different data types
+				; contained in Table 3-2 in Section 3.4. Then it initializes
+				; each variable to a value that is consistent with its data
+				; type.
+
+
+				.586
+				.model flat, stdcall
+				option casemap : none; case-sensitive
+
+				ExitProcess proto,dwExitCode:dword
+
+ 00000000			.data ; showing this is the data area 
+
+ 00000000 20			count BYTE 20h ; creating a byte variable (8-bit unsigned integer) named count
+ 00000001 F6			signed SBYTE -10 ; creating a signed byte variable (8-bit signed integer) named signed
+ 00000002 0024			hours WORD 24h ; creating a word variable (16-bit unsigned integer) named hours
+ 00000004 07E8			years SWORD +2024 ; creating a signed word variable (16-bit signed integer) named year
+ 00000006 0001E240		numbers DWORD 123456 ; creating a double word variable (32-bit unsigned integer) named numbers
+ 0000000A 05635E4F		liters SDWORD +90398287 ; creating a signed double word variable (32-bit signed integer) named liters
+ 0000000E 000000000000		zero FWORD 0; creating a far pointer in protected mode word variable (48-bit integer) named zero
+ 00000014			quad QWORD 67846381363 ; creating a quad word variable (64-bit integer) named quad
+	   0000000FCBF59F33
+ 0000001C			ten TBYTE 100893047287832 ; creating a ten-byte variable (80-bit (10-byte) integer) named ten
+	   000000005BC2FE3E7018
+ 00000026 C11CF5C3		negative REAL4 -9.81 ; creating an IEEE short real (32-bit (4-byte) integer) named negative
+ 0000002A			cans REAL8 1.2E+100 ; creating an IEEE long real (64-bit (8-byte) integer) named cans
+	   54B5F202F9E5B763
+ 00000032			huge REAL10 -5.7891234E-23 ; creating an IEEE extended real (80-bit (10-byte) integer) named huge
+	   BFB58BF8F030E5CF282D
+
+ 00000000			.code ; showing this is the code area
+ 00000000			main proc
+
+				    invoke ExitProcess,0 ; calls a Windows service (also known as a function named ExitProcess that halts the program and returns)
+ 00000000  6A 00	   *	    push   +000000000h
+ 00000002  E8 00000000 E   *	    call   ExitProcess
+ 00000007			main endp ; is the ending marker of the main procedure.
+
+				end main
+Microsoft (R) Macro Assembler Version 14.34.31935.0	    03/20/24 21:00:56
+datadefinitions.asm					     Symbols 2 - 1
+
+
+
+
+Segments and Groups:
+
+                N a m e                 Size     Length   Align   Combine Class
+
+FLAT . . . . . . . . . . . . . .	GROUP
+_DATA  . . . . . . . . . . . . .	32 Bit	 0000003C Para	  Public  'DATA'	
+_TEXT  . . . . . . . . . . . . .	32 Bit	 00000007 Para	  Public  'CODE'	
+
+
+Procedures, parameters, and locals:
+
+                N a m e                 Type     Value    Attr
+
+ExitProcess  . . . . . . . . . .	P Near	 00000000 FLAT	Length= 00000000 External STDCALL
+main . . . . . . . . . . . . . .	P Near	 00000000 _TEXT	Length= 00000007 Public STDCALL
+
+
+Symbols:
+
+                N a m e                 Type     Value    Attr
+
+@CodeSize  . . . . . . . . . . .	Number	 00000000h   
+@DataSize  . . . . . . . . . . .	Number	 00000000h   
+@Interface . . . . . . . . . . .	Number	 00000003h   
+@Model . . . . . . . . . . . . .	Number	 00000007h   
+@code  . . . . . . . . . . . . .	Text   	 _TEXT
+@data  . . . . . . . . . . . . .	Text   	 FLAT
+@fardata?  . . . . . . . . . . .	Text   	 FLAT
+@fardata . . . . . . . . . . . .	Text   	 FLAT
+@stack . . . . . . . . . . . . .	Text   	 FLAT
+cans . . . . . . . . . . . . . .	QWord	 0000002A _DATA	
+count  . . . . . . . . . . . . .	Byte	 00000000 _DATA	
+hours  . . . . . . . . . . . . .	Word	 00000002 _DATA	
+huge . . . . . . . . . . . . . .	TByte	 00000032 _DATA	
+liters . . . . . . . . . . . . .	DWord	 0000000A _DATA	
+negative . . . . . . . . . . . .	DWord	 00000026 _DATA	
+numbers  . . . . . . . . . . . .	DWord	 00000006 _DATA	
+quad . . . . . . . . . . . . . .	QWord	 00000014 _DATA	
+signed . . . . . . . . . . . . .	Byte	 00000001 _DATA	
+ten  . . . . . . . . . . . . . .	TByte	 0000001C _DATA	
+years  . . . . . . . . . . . . .	Word	 00000004 _DATA	
+zero . . . . . . . . . . . . . .	FWord	 0000000E _DATA	
+
+	   0 Warnings
+	   0 Errors

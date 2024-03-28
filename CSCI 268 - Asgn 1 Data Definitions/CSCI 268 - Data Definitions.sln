@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33122.133
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CSCI 268 - Data Definitions", "CSCI 268 - Data Definitions\CSCI 268 - Data Definitions.vcxproj", "{3F897134-DD74-40DB-8E1E-5200DEA2B6B5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3F897134-DD74-40DB-8E1E-5200DEA2B6B5}.Debug|x86.ActiveCfg = Debug|Win32
+		{3F897134-DD74-40DB-8E1E-5200DEA2B6B5}.Debug|x86.Build.0 = Debug|Win32
+		{3F897134-DD74-40DB-8E1E-5200DEA2B6B5}.Release|x86.ActiveCfg = Release|Win32
+		{3F897134-DD74-40DB-8E1E-5200DEA2B6B5}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {27EAE911-8C8F-4F69-8BC7-104206E8FBB5}
+	EndGlobalSection
+EndGlobal
